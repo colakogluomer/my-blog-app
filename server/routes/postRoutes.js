@@ -24,5 +24,15 @@ router.get("/", async (req, res) => {
     });
   }
 });
+router.get("/:id", async (req, res) => {
+  try {
+    const post = await PostService.find(req.params.id);
+    res.json(post);
+  } catch (error) {
+    res.status(404).json({
+      message: error.message,
+    });
+  }
+});
 
 export default router;

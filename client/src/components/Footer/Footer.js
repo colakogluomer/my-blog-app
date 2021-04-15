@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer className={classes.footer}>
       <Typography variant="h6" align="center" gutterBottom>
-        Footer
+        Hello World!
       </Typography>
       <Typography
         variant="subtitle1"

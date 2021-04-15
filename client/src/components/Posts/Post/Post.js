@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 import {
   CardMedia,
@@ -53,7 +54,7 @@ const OneCard = ({ _id, title, subTitle, content, tag, image, createdAt }) => {
       </CardContent>
       <CardActions>
         <Button size="medium" color="primary">
-          View
+          <Link to={`/${_id}`}>View</Link>
         </Button>
       </CardActions>
     </Card>

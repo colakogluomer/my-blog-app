@@ -38,12 +38,22 @@ const Info = () => {
         <div className={classes.heroButtons}>
           <Grid container spacing={2} justify="center">
             <Grid item>
-              <Button variant="contained" color="primary">
+              <Button
+                variant="contained"
+                color="primary"
+                href="https://github.com/colakogluomer"
+                target="_blank"
+              >
                 <GitHubIcon className={classes.icon} /> My Github Page
               </Button>
             </Grid>
             <Grid item>
-              <Button variant="outlined" color="primary">
+              <Button
+                variant="outlined"
+                color="primary"
+                href="https://www.linkedin.com/in/colakogluomer/"
+                target="_blank"
+              >
                 <LinkedInIcon className={classes.icon} />
                 My Linkedin Page
               </Button>
