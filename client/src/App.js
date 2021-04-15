@@ -1,21 +1,22 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Navbar from "./Navbar/Navbar";
-import Info from "./Info/Info";
-import Cards from "./Cards/Cards";
-import Footer from "./Footer/Footer";
+import Home from "./components/Home/Home";
+import Admin from "./components/Admin/Admin";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 const App = () => {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Navbar />
-      <main>
-        <Info />
-        <Cards />
-      </main>
-      <Footer />
-    </React.Fragment>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/admin" component={Admin} />
+        <Redirect from="/" to="/" />
+      </Switch>
+    </Router>
   );
 };
 
