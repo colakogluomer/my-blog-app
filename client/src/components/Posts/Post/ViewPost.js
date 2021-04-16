@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSinglePost } from "../../../actions/post";
-
-import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -18,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
     //marginBottom: theme.spacing(4),
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(2),
-    marginLeft: theme.spacing(8),
-    marginRight: theme.spacing(8),
+    marginLeft: theme.spacing(5),
+    marginRight: theme.spacing(5),
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -61,7 +59,6 @@ const ViewPost = ({ history, location, match }) => {
         className={classes.mainFeaturedPost}
         style={{ backgroundImage: `url(${currentPost?.image})` }}
       >
-        {/* Increase the priority of the hero background image */}
         {
           <img
             style={{ display: "none" }}
@@ -69,8 +66,7 @@ const ViewPost = ({ history, location, match }) => {
             alt={currentPost?.imageText}
           />
         }
-        {/* Increase the priority of the hero background image */}
-        {/*  */}
+
         <div className={classes.overlay} />
         <Grid container>
           <Grid item md={6}>

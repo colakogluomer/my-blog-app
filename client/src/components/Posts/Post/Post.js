@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const OneCard = ({ _id, title, subTitle, content, tag, image, createdAt }) => {
+const Post = ({ _id, title, subTitle, content, tag, image, createdAt }) => {
   const classes = useStyles();
   const convertRelativeTime = (date) => {
     return moment(date).fromNow();
@@ -57,4 +57,4 @@ const OneCard = ({ _id, title, subTitle, content, tag, image, createdAt }) => {
   );
 };
 
-export default OneCard;
+export default Post;
