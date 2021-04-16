@@ -38,11 +38,7 @@ const OneCard = ({ _id, title, subTitle, content, tag, image, createdAt }) => {
   };
   return (
     <Card className={classes.card}>
-      <CardMedia
-        className={classes.cardMedia}
-        image={image || "https://source.unsplash.com/random"}
-        title="selam"
-      />
+      <CardMedia className={classes.cardMedia} image={image} title="selam" />
 
       <CardContent className={classes.cardContent}>
         <Typography variant="h6">{title}</Typography>
