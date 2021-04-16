@@ -8,6 +8,7 @@ import {
   Container,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -39,9 +40,20 @@ const useStyles = makeStyles((theme) => ({
 
 const Auth = () => {
   const classes = useStyles();
+
+  const handleSubmit = () => {};
+
   return (
     <Container component="main" maxWidth="xs">
-      <Paper className={classes.paper}></Paper>
+      <Paper className={classes.paper} elevation={3}>
+        <Avatar className={classes.avatar}>
+          <LockOutlinedIcon />
+        </Avatar>
+        <Typography variant="h5">Sign In</Typography>
+        <form className={classes.form} onSubmit={handleSubmit}>
+          <Grid container spacing={2}></Grid>
+        </form>
+      </Paper>
     </Container>
   );
 };
