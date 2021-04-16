@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./components/Home/Home";
-import Admin from "./components/Admin/Admin";
+import Auth from "./components/Auth/Auth";
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,7 +15,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
 
-        <Route exact path="/admin" component={Admin} />
+        <Route exact path="/admin" component={Auth} />
 
         <Route exact path="/:id" component={ViewPost} />
         <Redirect from="/" to="/" />
