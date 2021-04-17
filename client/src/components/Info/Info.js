@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import CreateIcon from "@material-ui/icons/Create";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   heroContent: {
@@ -56,6 +57,12 @@ const Info = () => {
               >
                 <LinkedInIcon className={classes.icon} />
                 My Linkedin Page
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button variant="outlined" color="secondary">
+                <CreateIcon className={classes.icon} />
+                Create New Post
               </Button>
             </Grid>
           </Grid>

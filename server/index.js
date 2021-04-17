@@ -26,3 +26,5 @@ mongoose
   .then(() => console.log("connected to database"))
   .then(() => app.listen(PORT, () => console.log("server listening")))
   .catch((error) => console.log(error.message));
+
+mongoose.set("useFindAndModify", false);

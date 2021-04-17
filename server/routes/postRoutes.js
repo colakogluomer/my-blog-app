@@ -35,5 +35,12 @@ router.get("/:id", async (req, res) => {
     });
   }
 });
+router.patch("/:id", async (req, res) => {
+  const _id = req.params.id;
+  const post = req.body;
+  const options = { new: true };
+  const updatedPost = await PostService.updateById(_id, post, options);
+  res.json(updatedPost);
+});
 
 export default router;
