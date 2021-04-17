@@ -33,6 +33,12 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
   },
+  paper: {
+    padding: theme.spacing(2),
+  },
+  textField: {
+    marginBottom: theme.spacing(2),
+  },
 }));
 const postSchema = yup.object().shape({
   title: yup.string().required(),
