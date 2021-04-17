@@ -92,15 +92,9 @@ const Post = ({ _id, title, subTitle, content, image, createdAt }) => {
   return (
     <>
       <Dialog open={open}>
-        <DialogTitle>
-          {" "}
-          Edit Post{} {`${title}`}{" "}
-        </DialogTitle>
+        <DialogTitle>Edit Post</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            To subscribe to this website, please enter your email address here.
-            We will send updates occasionally.
-          </DialogContentText>
+          <DialogContentText>{`${title}`}</DialogContentText>
           <div className={classes.root}>
             <form
               noValidate
