@@ -176,7 +176,7 @@ const Post = ({ _id, title, subTitle, content, image, createdAt }) => {
             <Link to={`/${_id}`}>View</Link>
           </Button>
           <Button size="medium" color="primary" onClick={handleOpen}>
-            Hello
+            Edit
           </Button>
         </CardActions>
       </Card>
