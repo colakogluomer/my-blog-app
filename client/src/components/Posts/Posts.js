@@ -20,7 +20,7 @@ const Posts = () => {
     <Container className={classes.cardGrid} maxWidth="md">
       <Grid container spacing={4}>
         {posts.map((post) => (
-          <Grid item key={post} xs={12} sm={6} md={4}>
+          <Grid item key={post?._id} xs={12} sm={6} md={4}>
             <Post {...post} />
           </Grid>
         ))}

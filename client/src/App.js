@@ -18,7 +18,7 @@ const App = () => {
         <Route exact path="/admin" component={Auth} />
 
         <Route exact path="/:id" component={ViewPost} />
-        <Redirect from="/" to="/" />
+        {<Redirect from="/" to="/" />}
       </Switch>
     </Router>
   );

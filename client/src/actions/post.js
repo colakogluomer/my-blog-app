@@ -24,3 +24,14 @@ export const fetchSinglePost = (id) => async (dispatch) => {
     console.log(error);
   }
 };
+export const createPost = (post) => async (dispatch) => {
+  try {
+    const { data } = await api.createPost(post);
+    dispatch({
+      type: types.CREATE_POST,
+      payload: data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
