@@ -1,8 +1,9 @@
 import express from "express";
 const router = express.Router();
 import PostService from "../services/PostService.js";
+import auth from "../middleware/auth.js";
 
-router.post("/", async (req, res) => {
+router.post("/", async (req, res, auth) => {
   try {
     console.log(req.body);
     const post = await PostService.add(req.body);
