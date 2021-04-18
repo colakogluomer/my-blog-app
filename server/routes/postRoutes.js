@@ -42,5 +42,10 @@ router.patch("/:id", async (req, res) => {
   const updatedPost = await PostService.updateById(_id, post, options);
   res.json(updatedPost);
 });
+router.delete("/:id", async (req, res) => {
+  const deletedPost = await PostService.del(req.params.id);
+
+  res.json(deletedPost);
+});
 
 export default router;

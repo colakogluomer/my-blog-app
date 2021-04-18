@@ -19,3 +19,5 @@ export const signIn = async (formData) =>
   await axios.post(`${apiEndPoint}admin`, formData);
 export const updatePost = async (id, updatedPost) =>
   await axios.patch(`${apiEndPoint}${id}`, updatedPost);
+export const deletePost = async (id) =>
+  await axios.delete(`${apiEndPoint}${id}`);

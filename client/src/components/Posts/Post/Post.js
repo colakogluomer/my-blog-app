@@ -8,6 +8,7 @@ import * as yup from "yup";
 import FileBase64 from "react-file-base64";
 import { useDispatch } from "react-redux";
 import { updatePost } from "../../../actions/post";
+import { deletePost } from "../../../actions/post";
 import {
   Button,
   TextField,
@@ -83,6 +84,12 @@ const Post = ({ _id, title, subTitle, content, image, createdAt }) => {
     setFile(null);
     handleClose();
   };
+  const onDelete = () => {
+    dispatch(deletePost(_id));
+    reset();
+    setFile(null);
+    handleClose();
+  };
 
   const handleOpen = () => {
     setOpen(true);
@@ -148,8 +155,11 @@ const Post = ({ _id, title, subTitle, content, image, createdAt }) => {
           </div>
         </DialogContent>
         <DialogActions>
+          <Button onClick={onDelete} color="secondary">
+            Delete
+          </Button>
           <Button onClick={handleClose} color="inherit">
-            Vazgeç
+            Cancel
           </Button>
           <Button
             type="submit"
@@ -157,7 +167,7 @@ const Post = ({ _id, title, subTitle, content, image, createdAt }) => {
             color="primary"
             variant="outlined"
           >
-            Yayınla
+            Publish
           </Button>
         </DialogActions>
       </Dialog>

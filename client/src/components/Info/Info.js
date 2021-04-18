@@ -129,7 +129,7 @@ const Info = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="inherit">
-            Vazgeç
+            Cancel
           </Button>
           <Button
             type="submit"
@@ -137,7 +137,7 @@ const Info = () => {
             color="primary"
             variant="outlined"
           >
-            Yayınla
+            Publish
           </Button>
         </DialogActions>
       </Dialog>
