@@ -23,7 +23,7 @@ const Footer = () => {
         color="textSecondary"
         component="p"
       >
-        Something here to give the footer a purpose!
+        Istanbul/Turkey
       </Typography>
       <Copyright />
     </footer>

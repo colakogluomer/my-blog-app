@@ -7,7 +7,7 @@ const Copyright = () => {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="http://localhost:3000/">
-        Your Website
+        Omer Colakoglu
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}

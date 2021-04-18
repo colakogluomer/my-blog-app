@@ -67,7 +67,7 @@ const Post = ({ _id, title, subTitle, content, image, createdAt }) => {
     resolver: yupResolver(postSchema),
   });
   const user = JSON.parse(localStorage.getItem("profile"));
-  const check = false;
+
   const onSubmit = (data) => {
     console.log("submit");
     const updatedPost = {
