@@ -66,13 +66,15 @@ const Post = ({ _id, title, subTitle, content, image, createdAt }) => {
   const { register, handleSubmit, reset } = useForm({
     resolver: yupResolver(postSchema),
   });
-
+  const user = JSON.parse(localStorage.getItem("profile"));
+  const check = false;
   const onSubmit = (data) => {
     console.log("submit");
     const updatedPost = {
       _id: _id,
       ...data,
       image: file,
+      name: user?.result?._id,
     };
 
     dispatch(updatePost(_id, updatedPost));
@@ -175,9 +177,11 @@ const Post = ({ _id, title, subTitle, content, image, createdAt }) => {
           <Button size="medium" color="primary">
             <Link to={`/${_id}`}>View</Link>
           </Button>
-          <Button size="medium" color="primary" onClick={handleOpen}>
-            Edit
-          </Button>
+          {user?.result?._id ? (
+            <Button size="medium" color="primary" onClick={handleOpen}>
+              Edit
+            </Button>
+          ) : null}
         </CardActions>
       </Card>
     </>

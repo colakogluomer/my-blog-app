@@ -5,9 +5,9 @@ import auth from "../middleware/auth.js";
 
 router.post("/", async (req, res, auth) => {
   try {
-    console.log(req.body);
-    const post = await PostService.add(req.body);
-    res.json(post);
+    const post = req.body;
+    const newPost = await PostService.add(post);
+    res.json(newPost);
     console.log("post created");
   } catch (error) {
     res.status(404).json({

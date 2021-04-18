@@ -57,9 +57,10 @@ const Info = () => {
   const { register, handleSubmit, reset } = useForm({
     resolver: yupResolver(postSchema),
   });
+  const user = JSON.parse(localStorage.getItem("profile"));
 
   const onSubmit = (data) => {
-    dispatch(createPost({ ...data, image: file }));
+    dispatch(createPost({ ...data, image: file, name: user?.result?._id }));
     clearForm();
   };
   const handleOpen = () => {
@@ -186,14 +187,16 @@ const Info = () => {
                 </Button>
               </Grid>
               <Grid item>
-                <Button
-                  variant="outlined"
-                  color="secondary"
-                  onClick={handleOpen}
-                >
-                  <CreateIcon className={classes.icon} />
-                  Create New Post
-                </Button>
+                {user?.result?._id ? (
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    onClick={handleOpen}
+                  >
+                    <CreateIcon className={classes.icon} />
+                    Create New Post
+                  </Button>
+                ) : null}
               </Grid>
             </Grid>
           </div>
