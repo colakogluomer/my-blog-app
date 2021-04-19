@@ -8,7 +8,6 @@ router.post("/", async (req, res, auth) => {
     const post = req.body;
     const newPost = await PostService.add(post);
     res.json(newPost);
-    console.log("post created");
   } catch (error) {
     res.status(404).json({
       message: error.message,

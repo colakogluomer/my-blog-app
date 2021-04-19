@@ -14,11 +14,9 @@ export default class BaseService {
     return this.model.findById(itemId);
   }
   async updateById(itemId, post, options) {
-    console.log("geldi.");
     return this.model.findByIdAndUpdate(itemId, post, options);
   }
   async findOne({ email }) {
-    console.log("geldi");
     return this.model.findOne({ email });
   }
 }
